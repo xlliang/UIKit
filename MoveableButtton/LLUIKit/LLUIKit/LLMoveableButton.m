@@ -13,14 +13,13 @@
 @property (nonatomic,copy)    TapAction   actionBlock;
 @property (nonatomic, strong) UIImageView *imageView;
 
-
 @end
 
 @implementation LLMoveableButton
 
-- (instancetype)initWithFrame:(CGRect)frame buttonImage:(UIImage *)image clickedBlock:(TapAction)block
-{
-    if (self = [super initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)]) {
+- (instancetype)initWithFrame:(CGRect)frame buttonImage:(UIImage *)image clickedBlock:(TapAction)block{
+    
+    if (self = [super initWithFrame:frame]) {
         self.actionBlock = block;
         _imageView = [[UIImageView alloc] initWithImage:image];
         _imageView.image = image;
@@ -30,8 +29,8 @@
         _imageView.userInteractionEnabled = YES;
         [self addSubview:_imageView];
         
-        [self addTarget:self action:@selector(handleTapAction:) forControlEvents:UIControlEventTouchUpInside];
-    }
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+        [self addGestureRecognizer:tapGesture];    }
     return self;
 }
 
@@ -75,9 +74,7 @@
     self.center = CGPointMake(x, y);
 }
 
-#pragma mark - --------------------功能函数--------------------
-#pragma mark 分块内功能函数注释
-- (void)handleTapAction:(id *)sender
+- (void)handleTapGesture:(UITapGestureRecognizer *)sender
 {
     if (self.actionBlock) {
         self.actionBlock();
