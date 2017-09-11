@@ -22,7 +22,6 @@
     if (self = [super initWithFrame:frame]) {
         self.actionBlock = block;
         _imageView = [[UIImageView alloc] initWithImage:image];
-        _imageView.image = image;
         _imageView.frame = self.bounds;
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
         self.clipsToBounds = YES;
@@ -30,7 +29,9 @@
         [self addSubview:_imageView];
         
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
-        [self addGestureRecognizer:tapGesture];    }
+        [self addGestureRecognizer:tapGesture];
+        
+    }
     return self;
 }
 
