@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D65CAB1F6ED6F9004FF464 /* LLSingletonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D65CAA1F6ED6F9004FF464 /* LLSingletonTest.m */; };
 		4D4958B41F66248600F3D9DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4958B31F66248600F3D9DD /* AppDelegate.m */; };
 		4D4958B71F66248600F3D9DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4958B61F66248600F3D9DD /* ViewController.m */; };
-		4D4958BA1F66248600F3D9DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4958B81F66248600F3D9DD /* Main.storyboard */; };
 		4D4958BC1F66248600F3D9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D4958BB1F66248600F3D9DD /* Assets.xcassets */; };
 		4D4958BF1F66248600F3D9DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4958BD1F66248600F3D9DD /* LaunchScreen.storyboard */; };
 		4D4958C21F66248600F3D9DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4958C11F66248600F3D9DD /* main.m */; };
@@ -17,12 +17,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00D65CA51F6ED5D0004FF464 /* LLSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSingleton.h; sourceTree = "<group>"; };
+		00D65CA91F6ED6F9004FF464 /* LLSingletonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSingletonTest.h; sourceTree = "<group>"; };
+		00D65CAA1F6ED6F9004FF464 /* LLSingletonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSingletonTest.m; sourceTree = "<group>"; };
 		4D4958AF1F66248600F3D9DD /* LLUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D4958B21F66248600F3D9DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4D4958B31F66248600F3D9DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4D4958B51F66248600F3D9DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4D4958B61F66248600F3D9DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4D4958B91F66248600F3D9DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D4958BB1F66248600F3D9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D4958BE1F66248600F3D9DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D4958C01F66248600F3D9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,13 +67,15 @@
 				4D4958B31F66248600F3D9DD /* AppDelegate.m */,
 				4D4958B51F66248600F3D9DD /* ViewController.h */,
 				4D4958B61F66248600F3D9DD /* ViewController.m */,
-				4D4958B81F66248600F3D9DD /* Main.storyboard */,
 				4D4958BB1F66248600F3D9DD /* Assets.xcassets */,
 				4D4958BD1F66248600F3D9DD /* LaunchScreen.storyboard */,
 				4D4958C01F66248600F3D9DD /* Info.plist */,
 				4D4958C11F66248600F3D9DD /* main.m */,
 				4D4958C81F6624C200F3D9DD /* LLMoveableButton.h */,
 				4D4958C91F6624C200F3D9DD /* LLMoveableButton.m */,
+				00D65CA51F6ED5D0004FF464 /* LLSingleton.h */,
+				00D65CA91F6ED6F9004FF464 /* LLSingletonTest.h */,
+				00D65CAA1F6ED6F9004FF464 /* LLSingletonTest.m */,
 			);
 			path = LLUIKit;
 			sourceTree = "<group>";
@@ -136,7 +140,6 @@
 			files = (
 				4D4958BF1F66248600F3D9DD /* LaunchScreen.storyboard in Resources */,
 				4D4958BC1F66248600F3D9DD /* Assets.xcassets in Resources */,
-				4D4958BA1F66248600F3D9DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,20 +154,13 @@
 				4D4958B71F66248600F3D9DD /* ViewController.m in Sources */,
 				4D4958C21F66248600F3D9DD /* main.m in Sources */,
 				4D4958B41F66248600F3D9DD /* AppDelegate.m in Sources */,
+				00D65CAB1F6ED6F9004FF464 /* LLSingletonTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4D4958B81F66248600F3D9DD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D4958B91F66248600F3D9DD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4D4958BD1F66248600F3D9DD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +282,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LLUIKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LLUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LLUIKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LLUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";

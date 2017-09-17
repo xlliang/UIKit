@@ -11,6 +11,10 @@
 typedef void (^TapAction)(void);
 
 
+/*
+ *可以移动的Button ,限制在屏幕范围内
+ */
+
 @interface LLMoveableButton : UIControl
 
 - (instancetype)initWithImage:(UIImage *)image clickedBlock:(TapAction)block;
