@@ -17,6 +17,8 @@
 		00D65CD51F6EDE9F004FF464 /* test@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D65CD31F6EDE9F004FF464 /* test@2x.png */; };
 		00D65CD91F6EDEA7004FF464 /* LLSingletonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D65CD81F6EDEA7004FF464 /* LLSingletonTest.m */; };
 		00D65CDD1F6EDF15004FF464 /* LLDateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D65CDC1F6EDF15004FF464 /* LLDateTest.m */; };
+		4D2EEFA61F6F984A002E84B4 /* LLGCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2EEFA51F6F984A002E84B4 /* LLGCDTest.m */; };
+		4D4267E81F72475900037789 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4267E71F72475900037789 /* UIView+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		00D65CD81F6EDEA7004FF464 /* LLSingletonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSingletonTest.m; sourceTree = "<group>"; };
 		00D65CDB1F6EDF15004FF464 /* LLDateTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLDateTest.h; sourceTree = "<group>"; };
 		00D65CDC1F6EDF15004FF464 /* LLDateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLDateTest.m; sourceTree = "<group>"; };
+		4D2EEFA41F6F984A002E84B4 /* LLGCDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLGCDTest.h; sourceTree = "<group>"; };
+		4D2EEFA51F6F984A002E84B4 /* LLGCDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLGCDTest.m; sourceTree = "<group>"; };
+		4D4267E61F72475900037789 /* UIView+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		4D4267E71F72475900037789 /* UIView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,8 @@
 		00D65CB71F6EDE2D004FF464 /* LLUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4D4267E21F72470500037789 /* Category */,
+				4D2EEFA31F6F97FA002E84B4 /* GCD */,
 				00D65CDA1F6EDEE4004FF464 /* Date */,
 				00D65CD01F6EDE86004FF464 /* Singleton */,
 				00D65CCF1F6EDE7D004FF464 /* MoveableButton */,
@@ -121,6 +129,24 @@
 				00D65CDC1F6EDF15004FF464 /* LLDateTest.m */,
 			);
 			name = Date;
+			sourceTree = "<group>";
+		};
+		4D2EEFA31F6F97FA002E84B4 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				4D2EEFA41F6F984A002E84B4 /* LLGCDTest.h */,
+				4D2EEFA51F6F984A002E84B4 /* LLGCDTest.m */,
+			);
+			name = GCD;
+			sourceTree = "<group>";
+		};
+		4D4267E21F72470500037789 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				4D4267E61F72475900037789 /* UIView+Category.h */,
+				4D4267E71F72475900037789 /* UIView+Category.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,11 +221,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2EEFA61F6F984A002E84B4 /* LLGCDTest.m in Sources */,
 				00D65CD41F6EDE9F004FF464 /* LLMoveableButton.m in Sources */,
 				00D65CDD1F6EDF15004FF464 /* LLDateTest.m in Sources */,
 				00D65CD91F6EDEA7004FF464 /* LLSingletonTest.m in Sources */,
 				00D65CC01F6EDE2D004FF464 /* ViewController.m in Sources */,
 				00D65CBD1F6EDE2D004FF464 /* AppDelegate.m in Sources */,
+				4D4267E81F72475900037789 /* UIView+Category.m in Sources */,
 				00D65CBA1F6EDE2D004FF464 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +385,7 @@
 				00D65CCE1F6EDE2D004FF464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

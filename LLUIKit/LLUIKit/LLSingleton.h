@@ -10,8 +10,6 @@
 #define LLSingleton_h
 
 /*
-
- 性能不如GCD ,建议使用GCD
  
 static id _instance;
 + (instancetype)allocWithZone:(struct _NSZone *)zone

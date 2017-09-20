@@ -10,6 +10,7 @@
 #import "LLMoveableButton.h"
 #import "LLSingletonTest.h"
 #import "LLDateTest.h"
+#import "LLGCDTest.h"
 
 @interface ViewController ()
 
@@ -25,6 +26,7 @@
     [self moveableButtonTest];
     [self singletonTest];
     [self dateTest];
+    [self gcdTest];
 }
 
 #pragma mark - 可拖动按钮测试
@@ -55,6 +57,10 @@
     
 }
 
+- (void)gcdTest{
+    LLGCDTest *test = [LLGCDTest new];
+    [test syncConcurrent];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
