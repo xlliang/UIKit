@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  LLUIKit
+//  FPS
 //
-//  Created by liangxl on 2017/9/18.
-//  Copyright © 2017年 liangxl. All rights reserved.
+//  Created by 梁先生 on 2017/10/11.
+//  Copyright © 2017年 梁先生. All rights reserved.
 //
 
 #import "AppDelegate.h"
