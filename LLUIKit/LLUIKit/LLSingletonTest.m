@@ -9,5 +9,8 @@
 #import "LLSingletonTest.h"
 
 @implementation LLSingletonTest
+
 SingletonM(LLSingletonTest)
+
+
 @end

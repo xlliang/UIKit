@@ -12,4 +12,5 @@
 @interface LLSingletonTest : NSObject
 
 SingletonH(LLSingletonTest)
+
 @end

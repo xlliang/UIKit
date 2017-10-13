@@ -45,7 +45,7 @@
     self.text = [NSString stringWithFormat:@"%d",(int)fps];
 }
 
-- (void)SKFFPSstopDisplayLink
+- (void)invalidateDisplayLink
 {
     [self.displayLink invalidate];
     self.displayLink = nil;
