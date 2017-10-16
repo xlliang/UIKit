@@ -7,15 +7,24 @@
 //
 
 #import "LLDateTest.h"
+#import "NSDate+Category.h"
 
 @implementation LLDateTest
 
 - (void)testDate {
     // Do any additional setup after loading the view, typically from a nib.
-    
-    
     NSDate *date = [NSDate date];
-    NSLog(@"date = %@",date); //零时区时间
+    NSLog(@"date = %@",date); //0时区时间  ,ios11:调试后发现返回的是当前时区日期。无语
+    
+    NSLog(@"=====================================");
+    
+    [NSDate ll_formatterDate:date formatString:@"yyyyMMdd hhmmss"];
+    
+    NSLog(@"=====================================");
+
+    
+    
+    
     
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -38,7 +47,7 @@
     
     NSArray *zones = [NSTimeZone knownTimeZoneNames];
     for (NSString *zone in zones) {
-        NSLog(@"时区名 = %@", zone);
+        //NSLog(@"时区名 = %@", zone);
     }
     
     

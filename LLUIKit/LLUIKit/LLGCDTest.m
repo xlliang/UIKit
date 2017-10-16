@@ -11,6 +11,8 @@
 @implementation LLGCDTest
 
 - (void)syncConcurrent{
+    
+    return;
     NSLog(@"syncConcurrent---begin");
     
     dispatch_queue_t queue = dispatch_get_main_queue();
