@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004E4E981F9A2CBD002E25EA /* NSStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 004E4E971F9A2CBD002E25EA /* NSStringTest.m */; };
 		00D65CBA1F6EDE2D004FF464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D65CB91F6EDE2D004FF464 /* main.m */; };
 		00D65CBD1F6EDE2D004FF464 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D65CBC1F6EDE2D004FF464 /* AppDelegate.m */; };
 		00D65CC01F6EDE2D004FF464 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D65CBF1F6EDE2D004FF464 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		004E4E961F9A2CBD002E25EA /* NSStringTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSStringTest.h; sourceTree = "<group>"; };
+		004E4E971F9A2CBD002E25EA /* NSStringTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStringTest.m; sourceTree = "<group>"; };
 		00D65CB51F6EDE2D004FF464 /* LLUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D65CB91F6EDE2D004FF464 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00D65CBB1F6EDE2D004FF464 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				00D65CC61F6EDE2D004FF464 /* LaunchScreen.storyboard */,
 				00D65CC91F6EDE2D004FF464 /* Info.plist */,
 				00D65CB81F6EDE2D004FF464 /* Supporting Files */,
+				004E4E961F9A2CBD002E25EA /* NSStringTest.h */,
+				004E4E971F9A2CBD002E25EA /* NSStringTest.m */,
 			);
 			path = LLUIKit;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				00D65CD91F6EDEA7004FF464 /* LLSingletonTest.m in Sources */,
 				00D65CC01F6EDE2D004FF464 /* ViewController.m in Sources */,
 				00D65CBD1F6EDE2D004FF464 /* AppDelegate.m in Sources */,
+				004E4E981F9A2CBD002E25EA /* NSStringTest.m in Sources */,
 				4D4267E81F72475900037789 /* UIView+Category.m in Sources */,
 				00D65CBA1F6EDE2D004FF464 /* main.m in Sources */,
 			);

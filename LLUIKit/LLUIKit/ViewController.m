@@ -11,6 +11,7 @@
 #import "LLSingletonTest.h"
 #import "LLDateTest.h"
 #import "LLGCDTest.h"
+#import "NSStringTest.h"
 
 @interface ViewController ()
 
@@ -23,10 +24,12 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor =[UIColor yellowColor];
     
-    [self moveableButtonTest];
-    [self singletonTest];
-    [self dateTest];
-    [self gcdTest];
+//    [self moveableButtonTest];
+//    [self singletonTest];
+//    [self dateTest];
+//    [self gcdTest];
+//    
+    [[NSStringTest alloc] testString];
 }
 
 #pragma mark - 可拖动按钮测试
