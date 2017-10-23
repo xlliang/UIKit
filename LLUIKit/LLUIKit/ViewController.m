@@ -12,6 +12,7 @@
 #import "LLDateTest.h"
 #import "LLGCDTest.h"
 #import "NSStringTest.h"
+#import "LoopTest.h"
 
 @interface ViewController ()
 
@@ -29,7 +30,14 @@
 //    [self dateTest];
 //    [self gcdTest];
 //    
-    [[NSStringTest alloc] testString];
+//    [[NSStringTest alloc] testString];
+    
+    [LoopTest testArray];
+    
+    NSLog(@"====================================");
+    NSLog(@"====================================");
+
+    [LoopTest testDict];
 }
 
 #pragma mark - 可拖动按钮测试
