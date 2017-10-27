@@ -28,16 +28,15 @@
 //    [self moveableButtonTest];
 //    [self singletonTest];
 //    [self dateTest];
-//    [self gcdTest];
-//    
+    [self gcdTest];
+//
 //    [[NSStringTest alloc] testString];
     
-    [LoopTest testArray];
+//    [LoopTest testArray];
     
-    NSLog(@"====================================");
-    NSLog(@"====================================");
+   
 
-    [LoopTest testDict];
+//    [LoopTest testDict];
 }
 
 #pragma mark - 可拖动按钮测试
