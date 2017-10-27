@@ -80,7 +80,7 @@
     */
     
     
-    
+    /*
     dispatch_queue_t sync_q = dispatch_queue_create(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(sync_q, ^{
         NSLog(@"-- queue--");
@@ -90,6 +90,20 @@
     dispatch_async(async_m, ^{
         NSLog(@"--main queue--");
     });
+    */
+    
+    
+    
+    //按照指定的次数将block追加到dispatch queue中，并等待执行结束
+    dispatch_queue_t sync_q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_apply(10, sync_q, ^(size_t index) {
+        NSLog(@"====%zu",index);
+    });
+    NSLog(@"====done====");
+    
+    
+    
+    
     
     
     CFTimeInterval end = CFAbsoluteTimeGetCurrent();
