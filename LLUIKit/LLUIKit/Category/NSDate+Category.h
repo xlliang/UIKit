@@ -10,12 +10,12 @@
 
 @interface NSDate (Category)
 
-+ (NSString *)ll_yesterday;
++ (NSString *)yesterday;
 
-+ (NSString *)ll_today;
++ (NSString *)today;
 
-+ (NSString *)ll_tomorrow;
++ (NSString *)tomorrow;
 
-+ (NSString *)ll_formatterDate:(NSDate *)date formatString:(NSString *)format;
++ (NSString *)formatterDate:(NSDate *)date formatString:(NSString *)format;
 
 @end

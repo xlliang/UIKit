@@ -10,24 +10,24 @@
 
 @implementation NSDate (Category)
 
-+ (NSString *)ll_yesterday{
++ (NSString *)yesterday{
     NSDate *date = [NSDate date];
     NSDate *lastDay = [NSDate dateWithTimeInterval:-24*60*60 sinceDate:date];
-    return [NSDate ll_formatterDate:lastDay formatString:@"yyyyMMdd"];
+    return [NSDate formatterDate:lastDay formatString:@"yyyyMMdd"];
 }
 
-+ (NSString *)ll_today{
++ (NSString *)today{
     NSDate *date = [NSDate date];
-    return [NSDate ll_formatterDate:date formatString:@"yyyyMMdd"];
+    return [NSDate formatterDate:date formatString:@"yyyyMMdd"];
 }
 
-+ (NSString *)ll_tomorrow{
++ (NSString *)tomorrow{
     NSDate *date = [NSDate date];
     NSDate *nextDay = [NSDate dateWithTimeInterval:24*60*60 sinceDate:date];
-    return [NSDate ll_formatterDate:nextDay formatString:@"yyyyMMdd"];
+    return [NSDate formatterDate:nextDay formatString:@"yyyyMMdd"];
 }
 
-+ (NSString *)ll_formatterDate:(NSDate *)date formatString:(NSString *)format{
++ (NSString *)formatterDate:(NSDate *)date formatString:(NSString *)format{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:format];
     NSString *dateStr = [formatter stringFromDate:date];

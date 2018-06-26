@@ -18,7 +18,7 @@
     
     NSLog(@"=====================================");
     
-    [NSDate ll_formatterDate:date formatString:@"yyyyMMdd hhmmss"];
+    [NSDate formatterDate:date formatString:@"yyyyMMdd hhmmss"];
     
     NSLog(@"=====================================");
 
