@@ -28,7 +28,7 @@
 //    [self moveableButtonTest];
 //    [self singletonTest];
 //    [self dateTest];
-    [self gcdTest];
+//    [self gcdTest];
 //
 //    [[NSStringTest alloc] testString];
     
@@ -37,6 +37,32 @@
    
 
 //    [LoopTest testDict];
+    
+    NSMutableArray *arr = [@[@(11),@(2),@(3),@(4),@(5)] mutableCopy];
+    NSInteger len = arr.count;
+    for (int i = 0; i< len-1; i++){
+        NSLog(@"==i===%d",i);
+        for (int j =0; j<len-1-i; j++){
+            NSLog(@"==j===%d",j);
+
+            if([arr[j] intValue]>[arr[j+1] intValue]){
+                
+//                NSLog(@"===%@===%@",arr[j],arr[j+1]);
+                
+                NSNumber *temp = arr[j+1];
+                arr[j+1] = arr[j];
+                arr[j] = temp;
+                
+                
+            }
+            
+//            NSLog(@"1111===%@",arr);
+        }
+    }
+    
+//    NSLog(@"===%@",arr);
+    
+    
 }
 
 #pragma mark - 可拖动按钮测试

@@ -33,6 +33,7 @@
 		4D2B84DE20E1FDDA0077EE6E /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B84DD20E1FDDA0077EE6E /* UILabel+Category.m */; };
 		4D2B84E120E1FDF60077EE6E /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B84E020E1FDF60077EE6E /* UIImage+Category.m */; };
 		4D2EEFA61F6F984A002E84B4 /* LLGCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2EEFA51F6F984A002E84B4 /* LLGCDTest.m */; };
+		4DB2486C20FF72CF003E2F14 /* TestCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB2486B20FF72CF003E2F14 /* TestCopy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,8 @@
 		4D2B84E020E1FDF60077EE6E /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		4D2EEFA41F6F984A002E84B4 /* LLGCDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLGCDTest.h; sourceTree = "<group>"; };
 		4D2EEFA51F6F984A002E84B4 /* LLGCDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLGCDTest.m; sourceTree = "<group>"; };
+		4DB2486A20FF72CF003E2F14 /* TestCopy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCopy.h; sourceTree = "<group>"; };
+		4DB2486B20FF72CF003E2F14 /* TestCopy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCopy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 		00D65CB71F6EDE2D004FF464 /* LLUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4DB2486920FF72AC003E2F14 /* Copy */,
 				4D2B849320E1EA590077EE6E /* Category */,
 				4D2EEFA31F6F97FA002E84B4 /* GCD */,
 				00D65CDA1F6EDEE4004FF464 /* Date */,
@@ -219,6 +223,15 @@
 			name = GCD;
 			sourceTree = "<group>";
 		};
+		4DB2486920FF72AC003E2F14 /* Copy */ = {
+			isa = PBXGroup;
+			children = (
+				4DB2486A20FF72CF003E2F14 /* TestCopy.h */,
+				4DB2486B20FF72CF003E2F14 /* TestCopy.m */,
+			);
+			name = Copy;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,6 +309,7 @@
 				4D2B84C920E1F9A30077EE6E /* CAGradientLayer+Category.m in Sources */,
 				00D65CD41F6EDE9F004FF464 /* LLMoveableButton.m in Sources */,
 				4D2B84DE20E1FDDA0077EE6E /* UILabel+Category.m in Sources */,
+				4DB2486C20FF72CF003E2F14 /* TestCopy.m in Sources */,
 				4D2B84D220E1FB8E0077EE6E /* NSURL+Category.m in Sources */,
 				4D2B84D520E1FC220077EE6E /* UIButton+Category.m in Sources */,
 				00D65CDD1F6EDF15004FF464 /* LLDateTest.m in Sources */,
