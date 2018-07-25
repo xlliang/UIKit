@@ -14,6 +14,7 @@
 #import "NSStringTest.h"
 #import "LoopTest.h"
 #import "SecondViewController.h"
+#import "TestCopy.h"
 
 @interface ViewController ()
 
@@ -35,6 +36,8 @@
     [button addTarget:self action:@selector(tap) forControlEvents:UIControlEventTouchUpInside];
     
    
+    [self testCopy];
+    
     
 //    [self moveableButtonTest];
 //    [self singletonTest];
@@ -83,6 +86,32 @@
 
 
 #pragma mark - 可拖动按钮测试
+
+- (void)testCopy{
+    
+    TestCopy *copy1 = [[TestCopy alloc] init];
+    copy1.age = 20;
+    copy1.name = @"苏小妖";
+    TestCopy *copy2 = [copy1 copy];//复制副本
+    
+    
+    NSLog(@"%@\n%@",copy1,copy2);
+    
+    
+    //测试copy 修饰 可变对象 ,直接crash
+//    copy1.mutableString = [NSMutableString stringWithFormat:@"test copy "];
+//    [copy1.mutableString appendString:@"mutable"];
+    
+    
+    Person *person = [[Person alloc] init];
+    person.age = 100;
+    person.name = @"name";
+    person.sex = @"SEX";
+
+    Person *person1 = [person copy];
+    
+//    NSLog(@"%@\n%@",person,person1);
+}
 
 -(void)moveableButtonTest{
     LLMoveableButton *bt = [[LLMoveableButton alloc] initWithFrame:CGRectMake(0, 200, 64, 64) buttonImage:[UIImage imageNamed:@"test"] clickedBlock:^{
