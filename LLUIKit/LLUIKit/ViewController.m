@@ -13,8 +13,10 @@
 #import "LLGCDTest.h"
 #import "NSStringTest.h"
 #import "LoopTest.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
+
 
 @end
 
@@ -23,7 +25,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor =[UIColor yellowColor];
+    self.view.backgroundColor =[UIColor blueColor];
+    
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(100, 100, 100, 30);
+    [self.view addSubview:button];
+    [button setTitle:@"second" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(tap) forControlEvents:UIControlEventTouchUpInside];
+    
+   
     
 //    [self moveableButtonTest];
 //    [self singletonTest];
@@ -41,9 +52,9 @@
     NSMutableArray *arr = [@[@(11),@(2),@(3),@(4),@(5)] mutableCopy];
     NSInteger len = arr.count;
     for (int i = 0; i< len-1; i++){
-        NSLog(@"==i===%d",i);
+//        NSLog(@"==i===%d",i);
         for (int j =0; j<len-1-i; j++){
-            NSLog(@"==j===%d",j);
+//            NSLog(@"==j===%d",j);
 
             if([arr[j] intValue]>[arr[j+1] intValue]){
                 
@@ -64,6 +75,12 @@
     
     
 }
+
+- (void)tap{
+    SecondViewController *vc = [[SecondViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 #pragma mark - 可拖动按钮测试
 

@@ -33,7 +33,12 @@
 		4D2B84DE20E1FDDA0077EE6E /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B84DD20E1FDDA0077EE6E /* UILabel+Category.m */; };
 		4D2B84E120E1FDF60077EE6E /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B84E020E1FDF60077EE6E /* UIImage+Category.m */; };
 		4D2EEFA61F6F984A002E84B4 /* LLGCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2EEFA51F6F984A002E84B4 /* LLGCDTest.m */; };
+		4DAA391B2106F9D50032D18A /* TestTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA391A2106F9D50032D18A /* TestTimer.m */; };
+		4DAA391E2106FA750032D18A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA391D2106FA750032D18A /* SecondViewController.m */; };
 		4DB2486C20FF72CF003E2F14 /* TestCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB2486B20FF72CF003E2F14 /* TestCopy.m */; };
+		4DB9E6A721076F3800254088 /* NSTimer+WeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9E6A621076F3800254088 /* NSTimer+WeakTimer.m */; };
+		4DB9E6AA21076FB000254088 /* CADisplayLink+WeakDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9E6A921076FB000254088 /* CADisplayLink+WeakDisplayLink.m */; };
+		4DB9E6AD210770D200254088 /* LLWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9E6AC210770D200254088 /* LLWeakProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,8 +92,18 @@
 		4D2B84E020E1FDF60077EE6E /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		4D2EEFA41F6F984A002E84B4 /* LLGCDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLGCDTest.h; sourceTree = "<group>"; };
 		4D2EEFA51F6F984A002E84B4 /* LLGCDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLGCDTest.m; sourceTree = "<group>"; };
+		4DAA39192106F9D50032D18A /* TestTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTimer.h; sourceTree = "<group>"; };
+		4DAA391A2106F9D50032D18A /* TestTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTimer.m; sourceTree = "<group>"; };
+		4DAA391C2106FA750032D18A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		4DAA391D2106FA750032D18A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		4DB2486A20FF72CF003E2F14 /* TestCopy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCopy.h; sourceTree = "<group>"; };
 		4DB2486B20FF72CF003E2F14 /* TestCopy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCopy.m; sourceTree = "<group>"; };
+		4DB9E6A521076F3800254088 /* NSTimer+WeakTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+WeakTimer.h"; sourceTree = "<group>"; };
+		4DB9E6A621076F3800254088 /* NSTimer+WeakTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+WeakTimer.m"; sourceTree = "<group>"; };
+		4DB9E6A821076FB000254088 /* CADisplayLink+WeakDisplayLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CADisplayLink+WeakDisplayLink.h"; sourceTree = "<group>"; };
+		4DB9E6A921076FB000254088 /* CADisplayLink+WeakDisplayLink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CADisplayLink+WeakDisplayLink.m"; sourceTree = "<group>"; };
+		4DB9E6AB210770D200254088 /* LLWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLWeakProxy.h; sourceTree = "<group>"; };
+		4DB9E6AC210770D200254088 /* LLWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLWeakProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +136,7 @@
 		00D65CB71F6EDE2D004FF464 /* LLUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4DAA39182106F94A0032D18A /* Timer */,
 				4DB2486920FF72AC003E2F14 /* Copy */,
 				4D2B849320E1EA590077EE6E /* Category */,
 				4D2EEFA31F6F97FA002E84B4 /* GCD */,
@@ -140,6 +156,8 @@
 				004E4E971F9A2CBD002E25EA /* NSStringTest.m */,
 				00438F5D1F9E4FDE00E13090 /* LoopTest.h */,
 				00438F5E1F9E4FDE00E13090 /* LoopTest.m */,
+				4DAA391C2106FA750032D18A /* SecondViewController.h */,
+				4DAA391D2106FA750032D18A /* SecondViewController.m */,
 			);
 			path = LLUIKit;
 			sourceTree = "<group>";
@@ -223,6 +241,21 @@
 			name = GCD;
 			sourceTree = "<group>";
 		};
+		4DAA39182106F94A0032D18A /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				4DAA39192106F9D50032D18A /* TestTimer.h */,
+				4DAA391A2106F9D50032D18A /* TestTimer.m */,
+				4DB9E6A521076F3800254088 /* NSTimer+WeakTimer.h */,
+				4DB9E6A621076F3800254088 /* NSTimer+WeakTimer.m */,
+				4DB9E6A821076FB000254088 /* CADisplayLink+WeakDisplayLink.h */,
+				4DB9E6A921076FB000254088 /* CADisplayLink+WeakDisplayLink.m */,
+				4DB9E6AB210770D200254088 /* LLWeakProxy.h */,
+				4DB9E6AC210770D200254088 /* LLWeakProxy.m */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
 		4DB2486920FF72AC003E2F14 /* Copy */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,17 +337,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DAA391E2106FA750032D18A /* SecondViewController.m in Sources */,
 				4D2EEFA61F6F984A002E84B4 /* LLGCDTest.m in Sources */,
 				4D2B84D820E1FD320077EE6E /* UIDevice+Category.m in Sources */,
 				4D2B84C920E1F9A30077EE6E /* CAGradientLayer+Category.m in Sources */,
 				00D65CD41F6EDE9F004FF464 /* LLMoveableButton.m in Sources */,
 				4D2B84DE20E1FDDA0077EE6E /* UILabel+Category.m in Sources */,
+				4DB9E6AD210770D200254088 /* LLWeakProxy.m in Sources */,
 				4DB2486C20FF72CF003E2F14 /* TestCopy.m in Sources */,
 				4D2B84D220E1FB8E0077EE6E /* NSURL+Category.m in Sources */,
 				4D2B84D520E1FC220077EE6E /* UIButton+Category.m in Sources */,
 				00D65CDD1F6EDF15004FF464 /* LLDateTest.m in Sources */,
 				4D2B84C620E1F7890077EE6E /* NSString+Category.m in Sources */,
 				4D2B84C320E1F6EB0077EE6E /* NSArray+Category.m in Sources */,
+				4DB9E6A721076F3800254088 /* NSTimer+WeakTimer.m in Sources */,
 				00D65CD91F6EDEA7004FF464 /* LLSingletonTest.m in Sources */,
 				4D2B84CC20E1FADB0077EE6E /* NSDictionary+Category.m in Sources */,
 				4D2B84B520E1EA590077EE6E /* NSDate+Category.m in Sources */,
@@ -324,9 +360,11 @@
 				00D65CBD1F6EDE2D004FF464 /* AppDelegate.m in Sources */,
 				00438F5F1F9E4FDE00E13090 /* LoopTest.m in Sources */,
 				004E4E981F9A2CBD002E25EA /* NSStringTest.m in Sources */,
+				4DB9E6AA21076FB000254088 /* CADisplayLink+WeakDisplayLink.m in Sources */,
 				4D2B84B720E1EA590077EE6E /* UIView+Category.m in Sources */,
 				00D65CBA1F6EDE2D004FF464 /* main.m in Sources */,
 				4D2B84E120E1FDF60077EE6E /* UIImage+Category.m in Sources */,
+				4DAA391B2106F9D50032D18A /* TestTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
