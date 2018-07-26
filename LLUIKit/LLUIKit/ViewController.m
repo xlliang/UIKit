@@ -16,6 +16,8 @@
 #import "SecondViewController.h"
 #import "TestCopy.h"
 
+#import "TestKVC.h"
+
 @interface ViewController ()
 
 
@@ -37,6 +39,9 @@
     
    
     [self testCopy];
+    
+    TestKVC *kvc = [[TestKVC alloc] init];
+    [kvc testStart];
     
     
 //    [self moveableButtonTest];
