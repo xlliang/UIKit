@@ -33,6 +33,7 @@
 		4D2B84DE20E1FDDA0077EE6E /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B84DD20E1FDDA0077EE6E /* UILabel+Category.m */; };
 		4D2B84E120E1FDF60077EE6E /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B84E020E1FDF60077EE6E /* UIImage+Category.m */; };
 		4D2EEFA61F6F984A002E84B4 /* LLGCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2EEFA51F6F984A002E84B4 /* LLGCDTest.m */; };
+		4D4FC6C1212EAF0600B26CBA /* StringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4FC6C0212EAF0600B26CBA /* StringTest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4DAA391B2106F9D50032D18A /* TestTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA391A2106F9D50032D18A /* TestTimer.m */; };
 		4DAA391E2106FA750032D18A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA391D2106FA750032D18A /* SecondViewController.m */; };
 		4DB2486C20FF72CF003E2F14 /* TestCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB2486B20FF72CF003E2F14 /* TestCopy.m */; };
@@ -94,6 +95,8 @@
 		4D2B84E020E1FDF60077EE6E /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		4D2EEFA41F6F984A002E84B4 /* LLGCDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLGCDTest.h; sourceTree = "<group>"; };
 		4D2EEFA51F6F984A002E84B4 /* LLGCDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLGCDTest.m; sourceTree = "<group>"; };
+		4D4FC6BF212EAF0600B26CBA /* StringTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringTest.h; sourceTree = "<group>"; };
+		4D4FC6C0212EAF0600B26CBA /* StringTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringTest.m; sourceTree = "<group>"; };
 		4DAA39192106F9D50032D18A /* TestTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTimer.h; sourceTree = "<group>"; };
 		4DAA391A2106F9D50032D18A /* TestTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTimer.m; sourceTree = "<group>"; };
 		4DAA391C2106FA750032D18A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 		00D65CB71F6EDE2D004FF464 /* LLUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4D4FC6C2212EAF9100B26CBA /* String */,
 				4DEEDAF1210A069600A7959D /* KVC */,
 				4DAA39182106F94A0032D18A /* Timer */,
 				4DB2486920FF72AC003E2F14 /* Copy */,
@@ -159,8 +163,6 @@
 				00D65CC61F6EDE2D004FF464 /* LaunchScreen.storyboard */,
 				00D65CC91F6EDE2D004FF464 /* Info.plist */,
 				00D65CB81F6EDE2D004FF464 /* Supporting Files */,
-				004E4E961F9A2CBD002E25EA /* NSStringTest.h */,
-				004E4E971F9A2CBD002E25EA /* NSStringTest.m */,
 				00438F5D1F9E4FDE00E13090 /* LoopTest.h */,
 				00438F5E1F9E4FDE00E13090 /* LoopTest.m */,
 				4DAA391C2106FA750032D18A /* SecondViewController.h */,
@@ -246,6 +248,17 @@
 				4D2EEFA51F6F984A002E84B4 /* LLGCDTest.m */,
 			);
 			name = GCD;
+			sourceTree = "<group>";
+		};
+		4D4FC6C2212EAF9100B26CBA /* String */ = {
+			isa = PBXGroup;
+			children = (
+				4D4FC6BF212EAF0600B26CBA /* StringTest.h */,
+				4D4FC6C0212EAF0600B26CBA /* StringTest.m */,
+				004E4E961F9A2CBD002E25EA /* NSStringTest.h */,
+				004E4E971F9A2CBD002E25EA /* NSStringTest.m */,
+			);
+			name = String;
 			sourceTree = "<group>";
 		};
 		4DAA39182106F94A0032D18A /* Timer */ = {
@@ -372,6 +385,7 @@
 				4DB9E6A721076F3800254088 /* NSTimer+WeakTimer.m in Sources */,
 				00D65CD91F6EDEA7004FF464 /* LLSingletonTest.m in Sources */,
 				4D2B84CC20E1FADB0077EE6E /* NSDictionary+Category.m in Sources */,
+				4D4FC6C1212EAF0600B26CBA /* StringTest.m in Sources */,
 				4D2B84B520E1EA590077EE6E /* NSDate+Category.m in Sources */,
 				00D65CC01F6EDE2D004FF464 /* ViewController.m in Sources */,
 				4D2B84DB20E1FD5C0077EE6E /* UIFont+Category.m in Sources */,
