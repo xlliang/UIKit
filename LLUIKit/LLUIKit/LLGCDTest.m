@@ -10,7 +10,113 @@
 
 @implementation LLGCDTest
 
+#pragma mark - 串行队列同步和串行队列异步
+//串行队列同步
+- (void)serialQueueSyncMethod{
+    //创建队列
+    dispatch_queue_t queue = dispatch_queue_create("serialQueueSyncMethod", DISPATCH_QUEUE_SERIAL);
+    //执行任务
+    for (int i = 0; i < 6; i++) {
+        NSLog(@"mainThread--->%d",i);
+        dispatch_sync(queue, ^{
+            NSLog(@"Current Thread=%@---->%d-----",[NSThread currentThread],i);
+        });
+    }
+    NSLog(@"串行队列同步end");
+}
+
+//串行队列异步
+- (void)serialQueueAsyncMethod{
+    dispatch_queue_t queue = dispatch_queue_create("serialQueueAsyncMethod", DISPATCH_QUEUE_SERIAL);
+    for (int i = 0; i < 6; i++) {
+        NSLog(@"mainThread--->%d",i);
+        dispatch_async(queue, ^{
+            NSLog(@"Current Thread=%@---->%d-----",[NSThread currentThread],i);
+        });
+    }
+    NSLog(@"串行队列异步end");
+}
+
+//串行队列
+-(void)serialQueue{
+    //串行队列创建方式
+    dispatch_queue_t queue1 = dispatch_queue_create("queue", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue2 = dispatch_queue_create("queue", NULL);
+   
+    /*
+     1:串行同步，不开辟新线程，在主线程执行，所有block任务同步的
+     2:串行一步，开辟新线程，但是队列指只开辟一个新线程，所有block任务在新线程中同步执行
+     都会按照先进先出的方式，顺序调度队列中的任务，不论队列中是同步还是异步任务，都会等待前一个执行结束，在调度后一个
+    */
+    
+//    [self serialQueueSyncMethod];
+    [self serialQueueAsyncMethod];
+}
+
+
+#pragma mark - 并行队列同步和并行队列异步
+//并行队列同步
+- (void)concurrentQueueSyncMethod{
+    dispatch_queue_t queue = dispatch_queue_create("concurrentQueueSyncMethod", DISPATCH_QUEUE_CONCURRENT);
+    
+    for (int i = 0; i < 6; i++) {
+        NSLog(@"mainThread--->%d",i);
+        dispatch_sync(queue, ^{
+            NSLog(@"Current Thread=%@---->%d-----",[NSThread currentThread],i);
+        });
+    }
+    NSLog(@"并行队列同步end");
+}
+
+//并行队列异步
+- (void)concurrentQueueAsyncMethod{
+    dispatch_queue_t queue = dispatch_queue_create("concurrentQueueAsyncMethod", DISPATCH_QUEUE_CONCURRENT);
+    
+    for (int i = 0; i < 6; i++) {
+        NSLog(@"mainThread--->%d",i);
+        dispatch_async(queue, ^{
+            NSLog(@"Current Thread=%@---->%d-----",[NSThread currentThread],i);
+        });
+    }
+    
+    NSLog(@"并行队列异步end");
+}
+
+- (void)concurrentQueue{
+    //创建队列
+    dispatch_queue_t queue = dispatch_queue_create("queue", DISPATCH_QUEUE_CONCURRENT);
+    /*
+     并发队列同步执行和串行队列同步执行一样，都不会开辟新线程，block任务之间是同步执行的。
+     并发队列异步执行开辟了多个线程，并且执行顺序也不是顺序执行。因为异步开多线程的代名词，并发是开多条线程的代名词
+     有多个线程，操作进来之后它会将这些队列安排在可用的处理器上，同时保证先进来的任务优先处理。
+     以先进先出的方式，并发调度队列中的任务执行
+     如果当前调度的任务是同步执行的，会等待任务执行完成后，再调度后续的任务
+     如果当前调度的任务是异步执行的，同时底层线程池有可用的线程资源，会再新的线程调度后续任务的执行
+     */
+    
+    [self concurrentQueueSyncMethod];
+    [self concurrentQueueAsyncMethod];
+}
+
 - (void)syncConcurrent{
+//    [self serialQueue];
+//    [self concurrentQueue];
+    
+    
+    {
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_group_t group = dispatch_group_create();
+        for (int i = 0; i < 6; i++) {
+            dispatch_group_async(group, queue, ^{
+                NSLog(@"current Thread = %@----->%d",[NSThread currentThread],i);
+            });
+        }
+        
+        dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+            NSLog(@"current Thread = %@----->这是最后执行",[NSThread   currentThread]);
+        });
+
+    }
     
     
     /*
@@ -95,19 +201,19 @@
     
     
     //按照指定的次数将block追加到dispatch queue中，并等待执行结束
-    dispatch_queue_t sync_q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_apply(10, sync_q, ^(size_t index) {
-        NSLog(@"====%zu",index);
-    });
-    NSLog(@"====done====");
-    
-    
-    
-    
-    
-    
-    CFTimeInterval end = CFAbsoluteTimeGetCurrent();
-    NSLog(@"end==%f",end);
+//    dispatch_queue_t sync_q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_apply(10, sync_q, ^(size_t index) {
+//        NSLog(@"====%zu",index);
+//    });
+//    NSLog(@"====done====");
+//    
+//    
+//    
+//    
+//    
+//    
+//    CFTimeInterval end = CFAbsoluteTimeGetCurrent();
+//    NSLog(@"end==%f",end);
 
     
     
