@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib. ;;;;;;
     
     
     dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(12.0/*延迟执行时间*/ * NSEC_PER_SEC));
